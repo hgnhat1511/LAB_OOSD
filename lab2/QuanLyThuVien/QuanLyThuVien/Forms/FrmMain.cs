@@ -5,7 +5,11 @@ namespace QuanLyThuVien.Forms
 {
     public partial class FrmMain : Form
     {
-        public FrmMain() { InitializeComponent(); }
+        public FrmMain()
+        {
+            InitializeComponent();
+
+        }
 
         private void btnDanhMuc_Click(object sender, EventArgs e) { using (FrmDanhMuc f = new FrmDanhMuc()) f.ShowDialog(this); }
         private void btnSach_Click(object sender, EventArgs e) { using (FrmSach f = new FrmSach()) f.ShowDialog(this); }

@@ -72,5 +72,7 @@ namespace QuanLyThuVien.Forms
         private void LamMoiNXB() { txtNXBMa.Clear(); txtNXBDiaChi.Clear(); txtNXBSDT.Clear(); txtNXBMa.ReadOnly = false; btnNXBThem.Enabled = true; btnNXBCapNhat.Enabled = false; btnNXBXoa.Enabled = false; }
 
         private bool XacNhanXoa() { return MessageBox.Show("Xóa dữ liệu đang chọn?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes; }
+
+       
     }
 }

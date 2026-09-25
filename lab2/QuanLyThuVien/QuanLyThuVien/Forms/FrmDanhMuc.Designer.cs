@@ -117,10 +117,11 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nhân viên";
             this.tabPage1.UseVisualStyleBackColor = true;
+            
             // 
             // txtNVSDT
             // 
-            this.txtNVSDT.Location = new System.Drawing.Point(405, 16);
+            this.txtNVSDT.Location = new System.Drawing.Point(534, 117);
             this.txtNVSDT.Name = "txtNVSDT";
             this.txtNVSDT.Size = new System.Drawing.Size(100, 22);
             this.txtNVSDT.TabIndex = 20;

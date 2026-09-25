@@ -1,63 +1,66 @@
-﻿using System;
+﻿using QuanLyThuVien.Data;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using QuanLyThuVien.Data;
 
 namespace QuanLyThuVien.Services
 {
     public class DocGiaService
     {
-        public DataTable LayComboDocGia()
+        public DataTable LayTatCa()
         {
-            return Db.Query("SELECT MaDocGia, (Ho + N' ' + Ten) AS HoTen FROM DocGia ORDER BY Ho,Ten");
+            return Db.Query("SELECT MaDocGia, HoTen, NgaySinh, Phai, SoDienThoai FROM DocGia");
         }
 
-        public KetQuaXuLy CapThe(string maDocGia, DateTime ngayCap, DateTime hanSuDung, bool daDongLePhi)
+        public DataTable TimKiem(string tuKhoa)
         {
-            if (hanSuDung.Date < ngayCap.Date) return KetQuaXuLy.Loi("Hạn sử dụng phải từ ngày cấp trở đi.");
-            object tonTai = Db.Scalar("SELECT COUNT(*) FROM DocGia WHERE MaDocGia=@Ma", new SqlParameter("@Ma", maDocGia));
-            if (Convert.ToInt32(tonTai) == 0) return KetQuaXuLy.Loi("Không tìm thấy độc giả.");
+            return Db.Query("SELECT * FROM DocGia WHERE MaDocGia LIKE @kw OR HoTen LIKE @kw",
+                            new SqlParameter("@kw", "%" + tuKhoa + "%"));
+        }
 
-            using (SqlConnection cn = Db.OpenConnection())
-            using (SqlTransaction tx = cn.BeginTransaction())
+        public KetQuaXuLy LuuDocGia(string ma, string ten, DateTime ngaySinh, string phai, string sdt, bool capNhat)
+        {
+            if (string.IsNullOrWhiteSpace(ma) || string.IsNullOrWhiteSpace(ten))
+                return KetQuaXuLy.Loi("Mã và tên độc giả không được để trống.");
+            try
             {
-                try
-                {
-                    using (SqlCommand check = new SqlCommand(@"SELECT COUNT(*) FROM TheDocGia 
-                        WHERE MaDocGia=@Ma AND TrangThai=1 AND HanSuDung>=@NgayCap", cn, tx))
-                    {
-                        check.Parameters.AddWithValue("@Ma", maDocGia);
-                        check.Parameters.AddWithValue("@NgayCap", ngayCap.Date);
-                        if (Convert.ToInt32(check.ExecuteScalar()) > 0)
-                            return KetQuaXuLy.Loi("Độc giả đang có một thẻ còn giá trị sử dụng.");
-                    }
+                string sql = capNhat
+                    ? "UPDATE DocGia SET HoTen=@Ten, NgaySinh=@NgaySinh, Phai=@Phai, SoDienThoai=@SDT WHERE MaDocGia=@Ma"
+                    : "INSERT INTO DocGia(MaDocGia, HoTen, NgaySinh, Phai, SoDienThoai) VALUES(@Ma, @Ten, @NgaySinh, @Phai, @SDT)";
 
-                    using (SqlCommand off = new SqlCommand("UPDATE TheDocGia SET TrangThai=0 WHERE MaDocGia=@Ma AND TrangThai=1", cn, tx))
-                    {
-                        off.Parameters.AddWithValue("@Ma", maDocGia);
-                        off.ExecuteNonQuery();
-                    }
+                int n = Db.Execute(sql,
+                    new SqlParameter("@Ma", ma.Trim()),
+                    new SqlParameter("@Ten", ten.Trim()),
+                    new SqlParameter("@NgaySinh", ngaySinh),
+                    new SqlParameter("@Phai", string.IsNullOrEmpty(phai) ? (object)DBNull.Value : phai),
+                    new SqlParameter("@SDT", string.IsNullOrEmpty(sdt) ? (object)DBNull.Value : sdt));
 
-                    string maThe = "THE_" + maDocGia + "_" + DateTime.Now.ToString("yyyyMMddHHmmssfff");
-                    using (SqlCommand ins = new SqlCommand(@"INSERT INTO TheDocGia(MaThe,MaDocGia,NgayCap,HanSuDung,DaDongLePhi,TrangThai) 
-                        VALUES(@MaThe,@MaDG,@NgayCap,@Han, @LePhi,1)", cn, tx))
-                    {
-                        ins.Parameters.AddWithValue("@MaThe", maThe);
-                        ins.Parameters.AddWithValue("@MaDG", maDocGia);
-                        ins.Parameters.AddWithValue("@NgayCap", ngayCap.Date);
-                        ins.Parameters.AddWithValue("@Han", hanSuDung.Date);
-                        ins.Parameters.AddWithValue("@LePhi", daDongLePhi);
-                        ins.ExecuteNonQuery();
-                    }
-                    tx.Commit();
-                    return KetQuaXuLy.Ok("Cấp thẻ thư viện thành công. Mã thẻ: " + maThe);
-                }
-                catch (Exception ex)
-                {
-                    try { tx.Rollback(); } catch { }
-                    return KetQuaXuLy.Loi("Không thể cấp thẻ: " + ex.Message);
-                }
+                return n > 0 ? KetQuaXuLy.Ok("Lưu độc giả thành công.") : KetQuaXuLy.Loi("Không có dữ liệu thay đổi.");
             }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627 || ex.Number == 2601) return KetQuaXuLy.Loi("Mã độc giả đã tồn tại.");
+                return KetQuaXuLy.Loi("Lỗi cơ sở dữ liệu: " + ex.Message);
+            }
+        }
+
+        public KetQuaXuLy XoaDocGia(string ma)
+        {
+            try
+            {
+                int n = Db.Execute("DELETE FROM DocGia WHERE MaDocGia=@Ma", new SqlParameter("@Ma", ma));
+                return n > 0 ? KetQuaXuLy.Ok("Xóa thành công.") : KetQuaXuLy.Loi("Không tìm thấy dữ liệu.");
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 547) return KetQuaXuLy.Loi("Độc giả này đang có phiếu mượn/phạt, không thể xóa.");
+                return KetQuaXuLy.Loi("Lỗi cơ sở dữ liệu: " + ex.Message);
+            }
+        }
+        public DataTable LayComboDocGia()
+        {
+            // Đã sửa thành gọi trực tiếp cột HoTen thay vì ghép (Ho + Ten)
+            return Db.Query("SELECT MaDocGia, HoTen FROM DocGia ORDER BY HoTen");
         }
     }
 }

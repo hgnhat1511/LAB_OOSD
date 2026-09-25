@@ -72,6 +72,11 @@
             // numNam
             // 
             this.numNam.Location = new System.Drawing.Point(63, 132);
+            this.numNam.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.numNam.Name = "numNam";
             this.numNam.Size = new System.Drawing.Size(120, 22);
             this.numNam.TabIndex = 3;

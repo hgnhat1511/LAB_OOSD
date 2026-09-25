@@ -101,11 +101,20 @@
     <EmbeddedResource Include="Forms\FrmDanhMuc.resx">
       <DependentUpon>FrmDanhMuc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDocGia.resx">
+      <DependentUpon>FrmDocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMuonTra.resx">
+      <DependentUpon>FrmMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSach.resx">
       <DependentUpon>FrmSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmThongKe.resx">
+      <DependentUpon>FrmThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
