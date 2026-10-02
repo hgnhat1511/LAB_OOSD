@@ -1,0 +1,11 @@
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB4\eShoppingApp\eShoppingApp\bin\Debug\eShoppingApp.exe.config
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB4\eShoppingApp\eShoppingApp\bin\Debug\eShoppingApp.exe
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB4\eShoppingApp\eShoppingApp\bin\Debug\eShoppingApp.pdb
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB4\eShoppingApp\eShoppingApp\obj\Debug\eShoppingApp.csproj.AssemblyReference.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB4\eShoppingApp\eShoppingApp\obj\Debug\eShoppingApp.Properties.Resources.resources
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB4\eShoppingApp\eShoppingApp\obj\Debug\eShoppingApp.frmMain.resources
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB4\eShoppingApp\eShoppingApp\obj\Debug\eShoppingApp.csproj.GenerateResource.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB4\eShoppingApp\eShoppingApp\obj\Debug\eShoppingApp.csproj.CoreCompileInputs.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB4\eShoppingApp\eShoppingApp\obj\Debug\eShoppingApp.exe
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB4\eShoppingApp\eShoppingApp\obj\Debug\eShoppingApp.pdb
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB4\eShoppingApp\eShoppingApp\obj\Debug\eShoppingApp.exe.config

@@ -1,0 +1,24 @@
+﻿-- 1. Bảng Khách hàng
+CREATE TABLE KHACHHANG (
+    MaKH INT IDENTITY(1,1) PRIMARY KEY,
+    HoTen NVARCHAR(100),
+    DienThoai VARCHAR(15),
+    TenDangNhap VARCHAR(50),
+    MatKhau VARCHAR(50)
+);
+
+-- 2. Bảng Sản phẩm
+CREATE TABLE SANPHAM (
+    MaSP VARCHAR(20) PRIMARY KEY,
+    TenSP NVARCHAR(100),
+    GiaBan DECIMAL(18, 2)
+);
+
+-- 3. Bảng Đơn đặt hàng
+CREATE TABLE DONDATHANG (
+    MaDH INT IDENTITY(1,1) PRIMARY KEY,
+    MaKH INT,
+    TongTien DECIMAL(18, 2),
+    NgayDat DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (MaKH) REFERENCES KHACHHANG(MaKH)
+);
