@@ -1,0 +1,200 @@
+﻿CREATE DATABASE QuanLyCongTyDuLich;
+GO
+
+USE QuanLyCongTyDuLich;
+GO
+
+-- 1. TOUR
+CREATE TABLE TOUR (
+    MaTour VARCHAR(20) PRIMARY KEY,
+    TenTour NVARCHAR(200) NOT NULL,
+    SoNgay INT NOT NULL CHECK (SoNgay > 0),
+    SoDem INT NOT NULL CHECK (SoDem >= 0),
+    DonGia DECIMAL(18,2) NOT NULL CHECK (DonGia >= 0)
+);
+
+-- 2. KHÁCH HÀNG
+CREATE TABLE KHACH_HANG (
+    MaKhachHang VARCHAR(20) PRIMARY KEY,
+    HoTen NVARCHAR(100) NOT NULL,
+    DiaChi NVARCHAR(250),
+    DienThoai VARCHAR(20)
+);
+
+-- 3. ĐĂNG KÝ ĐOÀN
+CREATE TABLE DANG_KY_DOAN (
+    MaDangKyDoan VARCHAR(20) PRIMARY KEY,
+    MaTour VARCHAR(20) NOT NULL,
+    TenCoQuanDaiDien NVARCHAR(200),
+    DiaChiCoQuan NVARCHAR(250),
+    DienThoaiCoQuan VARCHAR(20),
+    NguoiDaiDien NVARCHAR(100) NOT NULL,
+    SoNguoi INT NOT NULL CHECK (SoNguoi > 0),
+    NgayDi DATE NOT NULL,
+    DiaDiemDon NVARCHAR(250),
+    MuaBaoHiem BIT NOT NULL DEFAULT 0,
+    TienDatCoc DECIMAL(18,2) NOT NULL DEFAULT 0,
+    TrangThai NVARCHAR(50) NOT NULL DEFAULT N'Chờ xác nhận',
+    FOREIGN KEY (MaTour) REFERENCES TOUR(MaTour),
+    CHECK (TienDatCoc >= 0)
+);
+
+-- 4. THÀNH VIÊN ĐOÀN
+CREATE TABLE THANH_VIEN_DOAN (
+    MaThanhVien VARCHAR(20) PRIMARY KEY,
+    MaDangKyDoan VARCHAR(20) NOT NULL,
+    HoTen NVARCHAR(100) NOT NULL,
+    ThongTinBaoHiem NVARCHAR(250),
+    FOREIGN KEY (MaDangKyDoan)
+        REFERENCES DANG_KY_DOAN(MaDangKyDoan)
+);
+
+-- 5. CHUYẾN ĐI DÀNH CHO KHÁCH LẺ/NHÓM NHỎ
+CREATE TABLE CHUYEN_DI (
+    MaChuyen VARCHAR(20) PRIMARY KEY,
+    MaTour VARCHAR(20) NOT NULL,
+    NgayDi DATE NOT NULL,
+    NgayVe DATE NOT NULL,
+    TrangThai NVARCHAR(50) NOT NULL DEFAULT N'Đang mở đăng ký',
+    FOREIGN KEY (MaTour) REFERENCES TOUR(MaTour),
+    CHECK (NgayVe >= NgayDi)
+);
+
+-- 6. ĐĂNG KÝ CHUYẾN
+CREATE TABLE DANG_KY_CHUYEN (
+    MaDangKyChuyen VARCHAR(20) PRIMARY KEY,
+    MaChuyen VARCHAR(20) NOT NULL,
+    MaKhachHang VARCHAR(20) NOT NULL,
+    NgayDangKy DATE NOT NULL DEFAULT CAST(GETDATE() AS DATE),
+    SoVe INT NOT NULL CHECK (SoVe > 0),
+    TongTien DECIMAL(18,2) NOT NULL CHECK (TongTien >= 0),
+    FOREIGN KEY (MaChuyen) REFERENCES CHUYEN_DI(MaChuyen),
+    FOREIGN KEY (MaKhachHang) REFERENCES KHACH_HANG(MaKhachHang)
+);
+
+-- 7. THANH TOÁN
+CREATE TABLE THANH_TOAN (
+    MaThanhToan VARCHAR(20) PRIMARY KEY,
+    MaDangKyDoan VARCHAR(20) NULL,
+    MaDangKyChuyen VARCHAR(20) NULL,
+    LoaiThanhToan NVARCHAR(100) NOT NULL,
+    SoTien DECIMAL(18,2) NOT NULL CHECK (SoTien >= 0),
+    NgayThanhToan DATE NOT NULL,
+    TrangThai NVARCHAR(50) NOT NULL DEFAULT N'Chưa thanh toán',
+    FOREIGN KEY (MaDangKyDoan)
+        REFERENCES DANG_KY_DOAN(MaDangKyDoan),
+    FOREIGN KEY (MaDangKyChuyen)
+        REFERENCES DANG_KY_CHUYEN(MaDangKyChuyen),
+    CHECK (
+        (MaDangKyDoan IS NOT NULL AND MaDangKyChuyen IS NULL)
+        OR
+        (MaDangKyDoan IS NULL AND MaDangKyChuyen IS NOT NULL)
+    )
+);
+
+-- 8. NHÂN VIÊN
+CREATE TABLE NHAN_VIEN (
+    MaNhanVien VARCHAR(20) PRIMARY KEY,
+    HoTen NVARCHAR(100) NOT NULL,
+    DienThoai VARCHAR(20),
+    LuongCanBan DECIMAL(18,2) NOT NULL DEFAULT 0,
+    LoaiNhanVien NVARCHAR(50) NOT NULL,
+    CHECK (LuongCanBan >= 0)
+);
+
+-- 9. PHÂN CÔNG HƯỚNG DẪN VIÊN
+CREATE TABLE PHAN_CONG (
+    MaPhanCong VARCHAR(20) PRIMARY KEY,
+    MaNhanVien VARCHAR(20) NOT NULL,
+    MaDangKyDoan VARCHAR(20) NULL,
+    MaChuyen VARCHAR(20) NULL,
+    ThoiGianBatDau DATETIME NOT NULL,
+    ThoiGianKetThuc DATETIME NOT NULL,
+    FOREIGN KEY (MaNhanVien) REFERENCES NHAN_VIEN(MaNhanVien),
+    FOREIGN KEY (MaDangKyDoan)
+        REFERENCES DANG_KY_DOAN(MaDangKyDoan),
+    FOREIGN KEY (MaChuyen) REFERENCES CHUYEN_DI(MaChuyen),
+    CHECK (ThoiGianKetThuc > ThoiGianBatDau),
+    CHECK (
+        (MaDangKyDoan IS NOT NULL AND MaChuyen IS NULL)
+        OR
+        (MaDangKyDoan IS NULL AND MaChuyen IS NOT NULL)
+    )
+);
+
+-- 10. ĐIỂM DỪNG CHÂN
+CREATE TABLE DIEM_DUNG_CHAN (
+    MaDiemDung VARCHAR(20) PRIMARY KEY,
+    TenDiaDiem NVARCHAR(200) NOT NULL,
+    DoiPhuongTien NVARCHAR(200),
+    CoAn BIT NOT NULL DEFAULT 0,
+    CoKhachSan BIT NOT NULL DEFAULT 0,
+    HangSao INT NULL,
+    CHECK (HangSao IS NULL OR HangSao BETWEEN 2 AND 5)
+);
+
+-- 11. CHẶNG HÀNH TRÌNH
+CREATE TABLE CHANG_HANH_TRINH (
+    MaChang VARCHAR(20) PRIMARY KEY,
+    MaTour VARCHAR(20) NOT NULL,
+    MaDiemDung VARCHAR(20) NOT NULL,
+    ThuTu INT NOT NULL CHECK (ThuTu > 0),
+    FOREIGN KEY (MaTour) REFERENCES TOUR(MaTour),
+    FOREIGN KEY (MaDiemDung) REFERENCES DIEM_DUNG_CHAN(MaDiemDung),
+    UNIQUE (MaTour, ThuTu)
+);
+
+-- 12. PHƯƠNG TIỆN
+CREATE TABLE PHUONG_TIEN (
+    MaPhuongTien VARCHAR(20) PRIMARY KEY,
+    TenPhuongTien NVARCHAR(100) NOT NULL,
+    MoTa NVARCHAR(250)
+);
+
+-- 13. PHƯƠNG TIỆN SỬ DỤNG TRÊN CHẶNG
+CREATE TABLE PHUONG_TIEN_CHANG (
+    MaChang VARCHAR(20) NOT NULL,
+    MaPhuongTien VARCHAR(20) NOT NULL,
+    PRIMARY KEY (MaChang, MaPhuongTien),
+    FOREIGN KEY (MaChang) REFERENCES CHANG_HANH_TRINH(MaChang),
+    FOREIGN KEY (MaPhuongTien) REFERENCES PHUONG_TIEN(MaPhuongTien)
+);
+
+-- 14. ĐIỂM THAM QUAN
+CREATE TABLE DIEM_THAM_QUAN (
+    MaDiemThamQuan VARCHAR(20) PRIMARY KEY,
+    TenDiem NVARCHAR(200) NOT NULL,
+    DiaDiem NVARCHAR(250),
+    NoiDung NVARCHAR(MAX),
+    YNghia NVARCHAR(MAX)
+);
+
+-- 15. TOUR - ĐIỂM THAM QUAN
+CREATE TABLE TOUR_DIEM_THAM_QUAN (
+    MaTour VARCHAR(20) NOT NULL,
+    MaDiemThamQuan VARCHAR(20) NOT NULL,
+    PRIMARY KEY (MaTour, MaDiemThamQuan),
+    FOREIGN KEY (MaTour) REFERENCES TOUR(MaTour),
+    FOREIGN KEY (MaDiemThamQuan)
+        REFERENCES DIEM_THAM_QUAN(MaDiemThamQuan)
+);
+
+-- 16. KHẢO SÁT SAU CHUYẾN ĐI
+CREATE TABLE KHAO_SAT (
+    MaKhaoSat VARCHAR(20) PRIMARY KEY,
+    MaDangKyDoan VARCHAR(20) NULL,
+    MaDangKyChuyen VARCHAR(20) NULL,
+    NgayGui DATE,
+    NoiDungGopY NVARCHAR(MAX),
+    NgayPhanHoi DATE,
+    FOREIGN KEY (MaDangKyDoan)
+        REFERENCES DANG_KY_DOAN(MaDangKyDoan),
+    FOREIGN KEY (MaDangKyChuyen)
+        REFERENCES DANG_KY_CHUYEN(MaDangKyChuyen),
+    CHECK (
+        (MaDangKyDoan IS NOT NULL AND MaDangKyChuyen IS NULL)
+        OR
+        (MaDangKyDoan IS NULL AND MaDangKyChuyen IS NOT NULL)
+    )
+);
+GO
