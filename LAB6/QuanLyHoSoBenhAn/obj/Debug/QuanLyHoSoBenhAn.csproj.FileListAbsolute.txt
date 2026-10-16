@@ -1,0 +1,10 @@
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyHoSoBenhAn\bin\Debug\QuanLyHoSoBenhAn.exe.config
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyHoSoBenhAn\bin\Debug\QuanLyHoSoBenhAn.exe
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyHoSoBenhAn\bin\Debug\QuanLyHoSoBenhAn.pdb
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyHoSoBenhAn\obj\Debug\QuanLyHoSoBenhAn.csproj.AssemblyReference.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyHoSoBenhAn\obj\Debug\QuanLyHoSoBenhAn.Properties.Resources.resources
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyHoSoBenhAn\obj\Debug\QuanLyHoSoBenhAn.csproj.GenerateResource.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyHoSoBenhAn\obj\Debug\QuanLyHoSoBenhAn.csproj.CoreCompileInputs.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyHoSoBenhAn\obj\Debug\QuanLyHoSoBenhAn.exe
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyHoSoBenhAn\obj\Debug\QuanLyHoSoBenhAn.pdb
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyHoSoBenhAn\obj\Debug\QuanLyHoSoBenhAn.exe.config
