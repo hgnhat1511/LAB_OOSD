@@ -1,4 +1,4 @@
-# LAB 3: HỆ THỐNG QUẢN LÝ KHÁCH SẠN
+# LAB 3: HỆ THỐNG QUẢN LÝ KHÁCH SẠN.
 
 **1. Thông tin sinh viên**
 - Họ tên: Nguyễn Văn Hoàng Nhật
