@@ -17,3 +17,4 @@ print('\n--- SAMPLE HEADING 2 ENTRIES ---')
 for i, p in enumerate(doc.paragraphs):
     if p.style.name == 'Heading 2':
         print(f'p[{i}]: {p.text.strip()[:60]}')
+

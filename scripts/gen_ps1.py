@@ -55,3 +55,4 @@ try {
 with open(r'scripts\apply_word_toc.ps1', 'w', encoding='utf-8-sig') as f:
     f.write(ps1_content)
 print('Wrote apply_word_toc.ps1 with UTF-8 BOM')
+

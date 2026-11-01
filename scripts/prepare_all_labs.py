@@ -77,3 +77,4 @@ if __name__ == '__main__':
     format_lab6()
     format_lab7()
     format_lab8()
+

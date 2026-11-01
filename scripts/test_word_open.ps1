@@ -16,3 +16,4 @@ try {
         [System.Runtime.Interopservices.Marshal]::ReleaseComObject($w) | Out-Null
     }
 }
+

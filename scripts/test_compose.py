@@ -13,3 +13,4 @@ composer.append(doc2)
 composer.save(test_out)
 
 print(f'Composed successfully! Size: {os.path.getsize(test_out)} bytes')
+

@@ -1,4 +1,4 @@
-﻿$w = $null
+$w = $null
 try {
     $w = New-Object -ComObject Word.Application
     $w.Visible = $false

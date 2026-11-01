@@ -54,3 +54,4 @@ composer.append(doc_bai2)
 
 composer.save(r'scripts\LAB1_formatted.docx')
 print('LAB1_formatted.docx created successfully!')
+

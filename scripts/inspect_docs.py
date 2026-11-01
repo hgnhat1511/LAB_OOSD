@@ -36,3 +36,4 @@ for lab, pth in docs:
     for idx, t, prv, nxt in imgs:
         label = t or prv or nxt
         print(f'  p[{idx}]: {label[:80]}')
+

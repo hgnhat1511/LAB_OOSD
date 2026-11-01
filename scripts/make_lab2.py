@@ -34,3 +34,4 @@ doc_lab2 = docx.Document(r'LAB2\BaoCaoBaiLAB2_CNPM2_NguyenVanHoangNhat.docx')
 composer.append(doc_lab2)
 composer.save(r'scripts\LAB2_formatted.docx')
 print('LAB2_formatted.docx created successfully!')
+

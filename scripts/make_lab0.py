@@ -205,3 +205,4 @@ def create_lab0():
 
 if __name__ == '__main__':
     create_lab0()
+

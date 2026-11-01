@@ -44,3 +44,4 @@ composer.save(standard_name)
 
 size_mb = os.path.getsize(output_filename) / (1024 * 1024)
 print(f"Master document created successfully: {output_filename} ({size_mb:.2f} MB)")
+

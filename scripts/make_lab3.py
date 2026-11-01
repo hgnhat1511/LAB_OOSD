@@ -61,3 +61,4 @@ doc_lab3 = docx.Document(r'LAB3\LAB3_NguyenVanHoangNhat.docx')
 composer.append(doc_lab3)
 composer.save(r'scripts\LAB3_formatted.docx')
 print('LAB3_formatted.docx created successfully!')
+
