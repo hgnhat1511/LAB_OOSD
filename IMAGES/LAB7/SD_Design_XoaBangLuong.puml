@@ -1,0 +1,21 @@
+@startuml SD_Design_XoaBangLuong
+skinparam shadowing false
+actor "Kế toán" as KT
+participant "FrmBangLuong" as F
+database "SQL Server" as DB
+ 
+KT -> F : chọn bảng lương; btnXoaBangLuong_Click()
+F --> KT : xác nhận xóa?
+KT -> F : đồng ý
+F -> DB : BEGIN TRANSACTION
+F -> DB : 1) UPDATE QuyetDinhKyLuat\nSET TrangThai = N'Chưa xử lý', MaBL = NULL WHERE MaBL = @MaBL
+F -> DB : 2) DELETE ChiTietBangLuong WHERE MaBL = @MaBL
+F -> DB : 3) DELETE BangLuong WHERE MaBL = @MaBL
+alt thành công
+  F -> DB : COMMIT
+  F --> KT : "Đã xóa, có thể lập lại"
+else lỗi
+  F -> DB : ROLLBACK
+  F --> KT : MessageBox lỗi
+end
+@enduml

@@ -1,0 +1,29 @@
+@startuml SD_Design_PhuTroi
+skinparam shadowing false
+actor "Ban chấm công" as BCC
+participant "FrmPhuTroi" as F
+database "SQL Server" as DB
+ 
+BCC -> F : mở Form, chọn kế hoạch
+F -> DB : SELECT MaKH, TuNgay, DenNgay FROM KeHoachPhanCong
+DB --> F : danh sách kế hoạch
+BCC -> F : nhập số phiếu, ngày phụ trội, hình thức
+F -> DB : SELECT MaNV, MaCa FROM ChiTietPhanCong\nWHERE MaKH = @MaKH AND NgayLam = @Ngay AND CoPhuTroi = 1
+DB --> F : các dòng phụ trội đã lập kế hoạch
+alt không có dòng nào
+  F --> BCC : báo lỗi, chọn ngày khác
+else có dòng
+  BCC -> F : chọn nhân viên, nhập số giờ; btnLuuPhieu_Click()
+  F -> F : kiểm tra >= 1 dòng, 0 < giờ <= 24
+  F -> DB : BEGIN TRANSACTION
+  F -> DB : 1) INSERT PhieuPhuTroi (SoPhieu, MaKH, NgayPhuTroi, HinhThuc)
+  F -> DB : 2) INSERT ChiTietPhuTroi (SoPhieu, MaKH, NgayPhuTroi, MaNV, MaCa, CoPhuTroi = 1, SoGioPhuTroi)
+  alt thành công
+    F -> DB : COMMIT
+    F --> BCC : "Đã lưu phiếu phụ trội"
+  else lỗi (khóa ngoại không khớp phân công, UNIQUE cùng ngày)
+    F -> DB : ROLLBACK (bắt lỗi nếu đã rollback)
+    F --> BCC : MessageBox lỗi
+  end
+end
+@enduml

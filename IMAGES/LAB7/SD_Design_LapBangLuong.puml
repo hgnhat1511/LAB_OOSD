@@ -1,0 +1,33 @@
+@startuml SD_Design_LapBangLuong
+skinparam shadowing false
+actor "Kế toán" as KT
+participant "FrmBangLuong" as F
+database "SQL Server" as DB
+ 
+KT -> F : chọn tháng, năm, nhập số ngày công chuẩn, số giờ/ngày\nbtnTinhLuong_Click()
+F -> DB : kiểm tra BangLuong (Thang, Nam) chưa tồn tại
+alt đã có bảng lương
+  F --> KT : thông báo, gợi ý xóa bảng lương cũ
+else chưa có
+  F -> DB : SELECT NV Chính thức có HĐ hiệu lực trong kỳ;\nQĐ lương, QĐ chức vụ hiệu lực (NgayHieuLuc lớn nhất <= cuối tháng);\nsố ngày công (ChiTietChamCong); giờ phụ trội (ChiTietPhuTroi theo NgayPhuTroi);\nHĐ dài hạn và hồ sơ bảo hiểm; phạt Trừ lương chưa xử lý
+  DB --> F : dữ liệu
+  F -> F : KiemTraHoSoBaoHiem(): HĐ dài hạn thiếu hồ sơ?
+  alt có nhân viên thiếu hồ sơ bảo hiểm
+    F --> KT : báo lỗi, liệt kê nhân viên; không cho lưu\n(CBNS lập hồ sơ ở FrmHoSoBaoHiem rồi tính lại)
+  else đủ hồ sơ
+    F -> F : tính từng nhân viên theo công thức G6;\nbỏ qua + cảnh báo nếu thiếu QĐ lương / chấm công;\ncảnh báo QĐ hiệu lực giữa tháng (G5); thực lĩnh >= 0
+    F --> KT : bảng xem trước + cảnh báo
+    KT -> F : btnLuu_Click()
+    F -> DB : BEGIN TRANSACTION
+    F -> DB : 1) INSERT BangLuong
+    F -> DB : 2) INSERT ChiTietBangLuong (khóa ngoại ghép bảo đảm QĐ đúng nhân viên;\ntrigger 50006 chặn thiếu hồ sơ bảo hiểm)
+    F -> DB : 3) UPDATE QuyetDinhKyLuat SET TrangThai = N'Đã xử lý', MaBL
+    alt thành công
+      F -> DB : COMMIT
+    else lỗi
+      F -> DB : ROLLBACK
+      F --> KT : MessageBox lỗi
+    end
+  end
+end
+@enduml

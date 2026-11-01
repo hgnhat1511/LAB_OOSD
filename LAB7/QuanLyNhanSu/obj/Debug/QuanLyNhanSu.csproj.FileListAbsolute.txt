@@ -1,0 +1,9 @@
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.AssemblyReference.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB6\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb

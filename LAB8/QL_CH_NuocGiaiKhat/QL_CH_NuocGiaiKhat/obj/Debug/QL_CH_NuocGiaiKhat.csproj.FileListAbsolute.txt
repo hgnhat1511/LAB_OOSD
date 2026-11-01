@@ -1,0 +1,10 @@
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB8\QL_CH_NuocGiaiKhat\QL_CH_NuocGiaiKhat\obj\Debug\QL_CH_NuocGiaiKhat.csproj.AssemblyReference.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB8\QL_CH_NuocGiaiKhat\QL_CH_NuocGiaiKhat\obj\Debug\QL_CH_NuocGiaiKhat.Properties.Resources.resources
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB8\QL_CH_NuocGiaiKhat\QL_CH_NuocGiaiKhat\obj\Debug\QL_CH_NuocGiaiKhat.csproj.GenerateResource.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB8\QL_CH_NuocGiaiKhat\QL_CH_NuocGiaiKhat\obj\Debug\QL_CH_NuocGiaiKhat.csproj.CoreCompileInputs.cache
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB8\QL_CH_NuocGiaiKhat\QL_CH_NuocGiaiKhat\bin\Debug\QL_CH_NuocGiaiKhat.exe.config
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB8\QL_CH_NuocGiaiKhat\QL_CH_NuocGiaiKhat\bin\Debug\QL_CH_NuocGiaiKhat.exe
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB8\QL_CH_NuocGiaiKhat\QL_CH_NuocGiaiKhat\bin\Debug\QL_CH_NuocGiaiKhat.pdb
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB8\QL_CH_NuocGiaiKhat\QL_CH_NuocGiaiKhat\obj\Debug\QL_CH_NuocGiaiKhat.exe
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB8\QL_CH_NuocGiaiKhat\QL_CH_NuocGiaiKhat\obj\Debug\QL_CH_NuocGiaiKhat.pdb
+D:\NAM4\PP_Ptr PM HDT\BTN\LAB_OOSD\LAB8\QL_CH_NuocGiaiKhat\QL_CH_NuocGiaiKhat\obj\Debug\QL_CH_NuocGiaiKhat.exe.config

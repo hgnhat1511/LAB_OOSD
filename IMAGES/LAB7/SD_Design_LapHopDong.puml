@@ -1,0 +1,20 @@
+@startuml SD_Design_LapHopDong
+skinparam shadowing false
+actor "Cán bộ nhân sự" as CBNS
+participant "FrmHopDong" as F
+database "SQL Server" as DB
+ 
+CBNS -> F : chọn nhân viên
+F -> DB : SELECT NgayKetThucThuViec FROM QuyetDinhTuyenDung WHERE MaNV = @MaNV
+DB --> F : ngày kết thúc thử việc
+alt ngày hiện tại < ngày kết thúc thử việc
+  F --> CBNS : báo lỗi, không cho lập
+else đã hết thử việc
+  CBNS -> F : chọn loại HĐ, nhập ngày; btnLuu_Click()
+  F -> DB : BEGIN TRANSACTION
+  F -> DB : INSERT HopDong
+  F -> DB : UPDATE NhanVien SET TrangThai = N'Chính thức'
+  F -> DB : COMMIT
+  F --> CBNS : mở FrmQDChucVu, FrmQDLuong\n(nếu Dài hạn: thêm FrmHoSoBaoHiem - bắt buộc trước khi tính lương)
+end
+@enduml
