@@ -1,4 +1,4 @@
-# THƯ MỤC IMAGES – TOÀN BỘ SƠ ĐỒ PHÂN TÍCH VÀ THIẾT KẾ CÁC BÀI LAB OOSD
+# THƯ MỤC IMAGES – TOÀN BỘ SƠ ĐỒ & FILE NGUỒN DRAW.IO CÁC BÀI LAB OOSD
 
 > **Học phần:** Phương pháp phát triển phần mềm hướng đối tượng (OOSD)  
 > **Sinh viên:** Nguyễn Văn Hoàng Nhật  
@@ -8,109 +8,67 @@
 
 ---
 
-## 📁 DANH MỤC LƯU TRỮ HÌNH VẼ THEO TỪNG BÀI LAB
+## 🎯 TUÂN THỦ QUY ĐỊNH BẮT BUỘC VỀ FILE HÌNH VẼ
+Tất cả các sơ đồ, hình vẽ trong phần phân tích và thiết kế hệ thống được tạo bằng công cụ chuyên dụng:
+- **Draw.io (diagrams.net):** Toàn bộ các file `.drawio` và `.drawio.svg` (giữ nguyên mô hình vector XML, không phải ảnh chụp màn hình raster) có thể mở, xem và chỉnh sửa trực tiếp trên [app.diagrams.net](https://app.diagrams.net/) hoặc plugin Draw.io trên VS Code / Visual Studio.
+- **PlantUML:** Các file mã nguồn `.puml` định nghĩa chi tiết các biểu đồ tuần tự và lớp thiết kế.
 
-Thư mục này lưu trữ toàn bộ các hình vẽ phân tích, thiết kế, kiến trúc và minh chứng thực hành của tất cả các bài LAB (từ LAB 0 đến LAB 8) theo đúng quy định của môn học:
-- **Công cụ thực hiện:** Draw.io (diagrams.net), PlantUML, StarUML, Visio / UML Modeling Tools.
-- **Định dạng lưu trữ:** Giữ nguyên định dạng gốc và vector có chứa siêu dữ liệu mô hình (Draw.io SVG/XML, PlantUML `.puml`, v.v.) đảm bảo có thể mở xem và chỉnh sửa trực tiếp.
+---
 
-### 1. `LAB0/` - Cài đặt & kiểm tra môi trường
-- Minh chứng cấu hình hệ thống máy tính Windows 11 x64.
-- Cài đặt & kiểm tra Java Development Kit: JDK 21.
-- Cài đặt & kiểm tra Apache Maven 3.9.
-- Cài đặt & kiểm tra Git Version Control và cấu hình danh tính sinh viên.
-- Cài đặt & kiểm tra Docker Desktop & Docker Compose.
-- Cấu hình IDE và plugin PlantUML để mô hình hóa phần mềm.
-- Kết quả chạy lệnh build & test dự án mẫu.
+## 📁 DANH MỤC CÁC FILE DRAW.IO THEO TỪNG BÀI LAB
 
-### 2. `LAB1/` - Phân tích yêu cầu & Mô hình hóa ban đầu
-- **Bài 1 - Hệ thống Thư viện trực tuyến:**
-  + Mô hình Use Case (Use Case Model).
-  + Đặc tả chi tiết các Use Case chính (Tìm kiếm tài liệu, Đọc trực tuyến, Tải tài liệu, Mượn sách, Quản lý tài khoản).
-- **Bài 2 - Hệ thống Cửa hàng nước giải khát:**
-  + Sơ đồ Use Case tổng quát.
-  + Sơ đồ lớp phân tích (Analysis Class Diagram).
-  + Sơ đồ Use Case phân rã luồng bán hàng & đặt hàng.
-  + Sơ đồ hoạt động (Activity Diagram).
-  + Sơ đồ tuần tự (Sequence Diagram).
+### 1. `IMAGES/LAB0/` – Môi trường & Minh chứng thực hành
+- Lưu trữ 10 hình ảnh minh chứng kiểm tra cấu hình hệ thống: Windows 11, JDK 21, Maven 3.9, Git 2.48, Docker Desktop, PlantUML plugin.
 
-### 3. `LAB2/` - Hệ thống Quản lý Thư viện
-- Hình 1: Sơ đồ Use Case tổng quát.
-- Hình 2: Sơ đồ Lớp (Class Diagram) hệ thống thư viện.
-- Hình 3: Sơ đồ Thực thể liên kết (ERD).
-- Hình 4: Phác thảo thiết kế giao diện Form.
-- Hình 5: Biểu đồ hoạt động (Activity Diagram) – Quy trình Mượn - Trả sách.
-- Hình 6 - 8: Quy trình nghiệp vụ: Thêm mới sách, Nhận trả sách & Lập phiếu phạt, Cấp thẻ thư viện.
-- Hình 9 - 12: Biểu đồ tuần tự (Sequence Diagram) – Cấp thẻ thư viện, Lập phiếu mượn, Nhận trả sách, Thêm mới đầu sách.
-- Hình 13 - 14: Giao diện thực tế Form Main, Form Danh Mục.
+### 2. `IMAGES/LAB1/` – Phân tích yêu cầu & Mô hình hóa ban đầu
+- 📄 [`LAB1_Bai1_UseCase_Model.drawio`](./LAB1/LAB1_Bai1_UseCase_Model.drawio): Sơ đồ Use Case Model hệ thống thư viện trực tuyến (13 ca sử dụng, quan hệ include/extend).
+- 📄 [`LAB1_Bai2_UseCase_TongQuat.drawio`](./LAB1/LAB1_Bai2_UseCase_TongQuat.drawio): Sơ đồ Use Case tổng quát Cửa hàng nước giải khát (Actor Khách quen, Khách vãng lai, Nhân viên, Nhà cung ứng).
+- 📄 [`LAB1_Bai2_Class_Diagram.drawio`](./LAB1/LAB1_Bai2_Class_Diagram.drawio): Sơ đồ lớp phân tích đầy đủ (NhanHieu, NuocGiaiKhat, NhaCungUng, DonDatHang, ChiTietDDH, PhieuGiaoHang, ChiTietPGH, KhachHang, HoaDon, ChiTietHD, PhieuHen, PhieuGhiNo).
+- 📄 [`LAB1_Bai2_Activity_Diagram.drawio`](./LAB1/LAB1_Bai2_Activity_Diagram.drawio): Biểu đồ hoạt động quy trình bán hàng, kiểm kho, hẹn giao và ghi nợ.
+- 📄 [`LAB1_Bai2_Sequence_Diagram.drawio`](./LAB1/LAB1_Bai2_Sequence_Diagram.drawio): Biểu đồ tuần tự nghiệp vụ Lập phiếu ghi nợ cho khách quen.
 
-### 4. `LAB3/` - Hệ thống Quản lý Khách sạn
-- Kiến trúc hệ thống 3 lớp (UI, Services, Data).
-- Thiết kế cơ sở dữ liệu và giao diện WinForms:
-  + Danh mục phòng, Loại phòng, Khách hàng, Dịch vụ.
-  + Quy trình đặt phòng, nhận phòng, lập hóa đơn và trả phòng.
-  + Thống kê doanh thu và báo cáo tình trạng phòng.
+### 3. `IMAGES/LAB2/` – Hệ thống Quản lý Thư viện
+- 📄 [`LAB2_UseCase_TongQuat.drawio`](./LAB2/LAB2_UseCase_TongQuat.drawio): Sơ đồ Use Case tổng quát toàn hệ thống thư viện.
+- 📄 [`LAB2_Class_Diagram.drawio`](./LAB2/LAB2_Class_Diagram.drawio): Sơ đồ lớp (Class Diagram) quản lý sách, độc giả, phiếu mượn/trả.
+- 📄 [`LAB2_ERD_QuanLyThuVien.drawio`](./LAB2/LAB2_ERD_QuanLyThuVien.drawio): Sơ đồ thực thể liên kết (ERD) cơ sở dữ liệu thư viện.
+- 📄 [`LAB2_Activity_MuonTraSach.drawio`](./LAB2/LAB2_Activity_MuonTraSach.drawio): Biểu đồ hoạt động luồng Mượn - Trả sách và xử lý vi phạm.
+- 📄 [`LAB2_Sequence_LapPhieuMuon.drawio`](./LAB2/LAB2_Sequence_LapPhieuMuon.drawio): Biểu đồ tuần tự nghiệp vụ Lập phiếu mượn sách.
 
-### 5. `LAB4/` - Hệ thống e-SHOPPING
-- Sơ đồ Use Case tổng quát (15 ca sử dụng phân rã chi tiết).
-- Sơ đồ Use Case phân rã phân hệ Xử lý đơn hàng (Checkout).
-- Sơ đồ lớp phân tích (Analysis Class Diagram) với các lớp thực thể SanPham, NhomSanPham, DonHang, GioHang, KhachHang, ThanhToan, GiaoHang.
-- Sơ đồ hoạt động (Activity Diagram) mô tả luồng kiểm tra tồn kho, áp dụng mã giảm giá và tính phí vận chuyển.
-- Sơ đồ tuần tự (Sequence Diagram) thanh toán và xử lý đơn hàng.
-- Sơ đồ thực thể liên kết (ERD) chuẩn hóa mức 3NF.
-- Sơ đồ kiến trúc thành phần (Component Diagram).
-- Ma trận truy vết yêu cầu (Traceability Matrix).
+### 4. `IMAGES/LAB3/` – Hệ thống Quản lý Khách sạn
+- 📄 [`LAB3_UseCase_QuanLyKhachSan.drawio`](./LAB3/LAB3_UseCase_QuanLyKhachSan.drawio): Sơ đồ Use Case hệ thống Quản lý Khách sạn (Lễ tân, Quản lý, Khách thuê).
+- 📄 [`LAB3_ERD_QuanLyKhachSan.drawio`](./LAB3/LAB3_ERD_QuanLyKhachSan.drawio): Sơ đồ cơ sở dữ liệu quan hệ ERD (Phong, LoaiPhong, TienNghi, KhachHang, PhieuDatPhong, DichVu, HoaDon).
 
-### 6. `LAB5/` - Hệ thống Quản lý Công ty Du lịch (Văn Hóa Việt TP.HCM)
-- Use Case Diagram tổng quát toàn hệ thống.
-- Use Case Diagram phân rã quy trình từ đăng ký đến kết thúc tour.
-- Sơ đồ cơ sở dữ liệu quan hệ (ERD).
-- Biểu đồ hoạt động: Quy trình đăng ký tour, Quy trình tổ chức & kết thúc tour.
-- 6 Biểu đồ tuần tự (Sequence Diagram):
-  + Lập phiếu đăng ký tour du lịch theo đoàn.
-  + Đăng ký tour theo chuyến.
-  + Phân công hướng dẫn viên.
-  + Thanh toán tour (đặt cọc, thanh toán đợt sau).
-  + Gửi khảo sát và lưu phản hồi của khách hàng.
-  + Thu phần chi phí còn lại của tour đoàn.
-- Thiết kế giao diện WinForms đầy đủ các chức năng quản lý.
+### 5. `IMAGES/LAB4/` – Hệ thống e-SHOPPING
+- 📄 [`LAB4_UseCase_TongQuat.drawio`](./LAB4/LAB4_UseCase_TongQuat.drawio): Sơ đồ Use Case tổng quát (15 ca sử dụng, phân quyền Customer & Admin).
+- 📄 [`LAB4_Activity_Checkout.drawio`](./LAB4/LAB4_Activity_Checkout.drawio): Biểu đồ hoạt động luồng kiểm tra tồn kho, áp dụng mã miễn phí vận chuyển ($0 nếu >= $50, $5 nếu < $50) và thanh toán thẻ.
+- 📄 [`LAB4_Analysis_Class_Diagram.drawio`](./LAB4/LAB4_Analysis_Class_Diagram.drawio): Sơ đồ lớp phân tích (SanPham, NhomSanPham, GioHang, KhachHang, DonHang, ChiTietDonHang, ThanhToan, GiaoHang).
+- 📄 [`LAB4_DangKy_DangNhap.drawio`](./LAB4/LAB4_DangKy_DangNhap.drawio): Sơ đồ phân tích luồng Đăng ký & Đăng nhập hệ thống e-Shopping.
 
-### 7. `LAB6/` - Hệ thống Quản lý Hồ sơ Bệnh án của Bệnh nhân
-- **File gốc Draw.io (định dạng SVG/XML chứa mô hình có thể chỉnh sửa trực tiếp):**
-  + `activity.drawio.svg`: Biểu đồ hoạt động quy trình khám chữa bệnh.
-  + `Class =_Diagram.drawio.svg`: Biểu đồ lớp phân tích và thiết kế.
-  + `erd.drawio.svg`: Sơ đồ thực thể liên kết ERD 13 bảng.
-  + `lab6_usecase.svg`: Sơ đồ Use Case tổng quát.
-  + `phẩn.drawio.svg` / `phanra.png`: Sơ đồ phân rã chức năng.
-  + `sequence.drawio.svg`: Biểu đồ tuần tự nghiệp vụ khám và kê đơn.
-- Giao diện ứng dụng WinForms: FormMain, Bệnh nhân, Phiếu khám, Xét nghiệm, Lịch khám định kỳ, Hồ sơ bệnh án, Toa thuốc, Thanh toán.
+### 6. `IMAGES/LAB5/` – Quản lý Công ty Du lịch (Văn Hóa Việt TP.HCM)
+- 📄 [`LAB5_UseCase_QuanLyDuLich.drawio`](./LAB5/LAB5_UseCase_QuanLyDuLich.drawio): Sơ đồ Use Case toàn hệ thống du lịch.
+- 📄 [`LAB5_Activity_DangKyTour.drawio`](./LAB5/LAB5_Activity_DangKyTour.drawio): Biểu đồ hoạt động quy trình đăng ký tour và thanh toán đặt cọc.
 
-### 8. `LAB7/` - Hệ thống Quản lý Nhân sự (Công ty Sơn Đông Á)
-- Sơ đồ Use Case tổng quát và phân rã thử việc - hợp đồng.
-- Biểu đồ lớp phân tích (Class Diagram).
-- Biểu đồ trạng thái (State Machine Diagram): Trạng thái Nhân viên, Quyết định khen thưởng, Quyết định kỷ luật.
-- Biểu đồ hoạt động (Activity Diagram) luồng thử việc và ký hợp đồng.
-- Biểu đồ lớp thiết kế (Design Class Diagram - Lớp thực thể và Lớp Form).
-- Sơ đồ cơ sở dữ liệu quan hệ (ERD).
-- **Mã nguồn và sơ đồ PlantUML:**
-  + `SD_Design_KhenThuong.puml`
-  + `SD_Design_PhieuChi.puml`
-  + `SD_Design_LapHopDong.puml`
-  + `SD_Design_PhuTroi.puml`
-  + `SD_Design_LapBangLuong.puml`
-  + `SD_Design_XoaBangLuong.puml`
-- Giao diện thực tế Form Nhân viên, Phòng ban, Hợp đồng, Bảng lương, Khen thưởng, Kỷ luật.
+### 7. `IMAGES/LAB6/` – Quản lý Hồ sơ Bệnh án của Bệnh nhân
+- 📄 [`LAB6_Activity_Diagram.drawio`](./LAB6/LAB6_Activity_Diagram.drawio): Biểu đồ hoạt động quy trình khám chữa bệnh và lưu trữ bệnh án.
+- 📄 [`LAB6_Class_Diagram.drawio`](./LAB6/LAB6_Class_Diagram.drawio): Biểu đồ lớp phân tích và thiết kế chi tiết.
+- 📄 [`LAB6_ERD_Diagram.drawio`](./LAB6/LAB6_ERD_Diagram.drawio): Sơ đồ cơ sở dữ liệu ERD 13 bảng.
+- 📄 [`LAB6_UseCase_Diagram.drawio`](./LAB6/LAB6_UseCase_Diagram.drawio): Sơ đồ Use Case tổng quát.
+- 📄 [`LAB6_PhanRa_ChucNang.drawio`](./LAB6/LAB6_PhanRa_ChucNang.drawio): Sơ đồ phân rã chức năng nghiệp vụ.
+- 📄 [`LAB6_Sequence_Diagram.drawio`](./LAB6/LAB6_Sequence_Diagram.drawio): Biểu đồ tuần tự khám bệnh, kê đơn và lưu kết quả.
 
-### 9. `LAB8/` - Hệ thống Quản lý Cửa hàng Nước Giải Khát
-- Hình 2.1: Use Case Diagram tổng quát toàn hệ thống.
-- Hình 2.2: Use Case Diagram phân rã chi tiết luồng bán hàng và hẹn giao.
-- Hình 2.3: Class Diagram phân tích phần nhập hàng từ nhà cung ứng.
-- Hình 2.4: Class Diagram phân tích phần bán hàng, hẹn giao, ghi nợ.
-- Hình 2.5: Class Diagram tổng quát toàn hệ thống.
-- Hình 2.6 - 2.8: State Diagram cho Hóa đơn, Đơn đặt hàng, Phiếu ghi nợ.
-- Hình 2.9: Activity Diagram quy trình bán hàng, hẹn giao đến giao đủ (3 phân đoạn).
-- Hình 2.10: Sequence Diagram phân tích nghiệp vụ Lập phiếu ghi nợ cho khách quen.
-- Hình 3.1 - 3.2: Class Diagram thiết kế phần nhập hàng và bán hàng/hẹn giao/ghi nợ.
-- Hình 3.3: Sơ đồ thực thể liên kết ERD.
-- Hình 3.4 - 3.5: Sequence Diagram thiết kế Lập hóa đơn/hẹn giao và Lập phiếu ghi nợ.
-- Giao diện phần mềm WinForms thực tế (Bán hàng, Đơn đặt hàng, Phiếu giao hàng, Phiếu hẹn, Phiếu ghi nợ, Khách hàng).
+### 8. `IMAGES/LAB7/` – Quản lý Nhân sự (Công ty Sơn Đông Á)
+- 📄 [`LAB7_UseCase_QuanLyNhanSu.drawio`](./LAB7/LAB7_UseCase_QuanLyNhanSu.drawio): Sơ đồ Use Case quản lý nhân sự (CBNS, Giám đốc, Kế toán, Ban chấm công).
+- 📄 [`LAB7_State_NhanVien.drawio`](./LAB7/LAB7_State_NhanVien.drawio): Biểu đồ chuyển trạng thái của nhân viên (Ứng viên -> Thử việc -> Chính thức -> Thôi việc).
+- 📄 Toàn bộ các file mã nguồn PlantUML (`.puml`): `SD_Design_KhenThuong.puml`, `SD_Design_PhieuChi.puml`, `SD_Design_LapHopDong.puml`, `SD_Design_PhuTroi.puml`, `SD_Design_LapBangLuong.puml`, `SD_Design_XoaBangLuong.puml`.
+
+### 9. `IMAGES/LAB8/` – Quản lý Cửa hàng Nước Giải Khát
+- 📄 [`LAB8_Hinh2_1_UseCase_TongQuat.drawio`](./LAB8/LAB8_Hinh2_1_UseCase_TongQuat.drawio): Sơ đồ Use Case tổng quát theo đặc tả StarUML.
+- 📄 [`LAB8_Hinh2_6_State_HoaDon.drawio`](./LAB8/LAB8_Hinh2_6_State_HoaDon.drawio): Biểu đồ chuyển trạng thái Hóa đơn.
+- 📄 [`LAB8_Hinh3_3_ERD.drawio`](./LAB8/LAB8_Hinh3_3_ERD.drawio): Sơ đồ thực thể liên kết ERD đầy đủ các bảng dữ liệu.
+
+---
+
+## 🛠️ HƯỚNG DẪN MỞ VÀ CHỈNH SỬA FILE DRAW.IO
+1. Truy cập trực tuyến: [https://app.diagrams.net/](https://app.diagrams.net/)
+2. Chọn **Open Existing Diagram** -> Chọn file `.drawio` từ máy hoặc chọn trực tiếp từ GitHub Repository.
+3. Hoặc cài đặt extension **Draw.io Integration** trên Visual Studio Code để xem và chỉnh sửa trực tiếp ngay trong mã nguồn.

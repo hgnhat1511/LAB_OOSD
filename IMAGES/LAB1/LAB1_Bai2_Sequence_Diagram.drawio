@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" modified="2026-11-01T20:00:00.000Z" agent="Antigravity" version="24.0.0" type="device">
+  <diagram id="e3df12d6bb8a4897" name="LAB1_Bai2_Sequence_LapPhieuNo">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="700" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Khách quen
+:KhachHang" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="100" y="40" width="120" height="500" as="geometry" /></mxCell>
+        <mxCell id="3" value="Nhân viên
+:NhanVien" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="350" y="40" width="120" height="500" as="geometry" /></mxCell>
+        <mxCell id="4" value="Giao diện
+:FrmBanHang" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="600" y="40" width="120" height="500" as="geometry" /></mxCell>
+        <mxCell id="5" value="Cơ sở dữ liệu
+:Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="850" y="40" width="120" height="500" as="geometry" /></mxCell>
+        <mxCell id="6" value="1: Yêu cầu nợ tiền hàng" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#212529;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="2" target="3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="7" value="2: Nhập mã khách &amp; kiểm tra hạn mức" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#212529;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="3" target="4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="8" value="3: SELECT ThongTinNo WHERE MaKH" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#212529;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="4" target="5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="9" value="4: Trả về kết quả: Hợp lệ" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="5" target="4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="10" value="5: Hiển thị form Lập Phiếu Ghi Nợ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#212529;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="4" target="3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="11" value="6: Nhập số tiền nợ, ngày hẹn trả, lý do" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#212529;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="3" target="4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="12" value="7: INSERT INTO PhieuGhiNo, UPDATE CongNo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#212529;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="4" target="5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="13" value="8: Lưu thành công (Success)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="5" target="4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="14" value="9: In phiếu ghi nợ &amp; cập nhật hóa đơn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#212529;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="4" target="3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="15" value="10: Giao phiếu nợ &amp; xuất hàng cho khách" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;strokeColor=#212529;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="3" target="2"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,3 +1,4 @@
 .vs/
 ~$*.docx
 *.tmp
+__pycache__/

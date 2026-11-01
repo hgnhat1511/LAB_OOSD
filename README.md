@@ -14,10 +14,11 @@
 
 ---
 
-### 🌐 THÔNG TIN REPOSITORY VÀ HÌNH VẼ
+### 🌐 THÔNG TIN REPOSITORY VÀ HÌNH VẼ DRAW.IO
 - **Đường link Repository GitHub:** [https://github.com/hgnhat1511/LAB_OOSD](https://github.com/hgnhat1511/LAB_OOSD)
-- **Thư mục IMAGES lưu trữ hình vẽ & sơ đồ gốc:** [https://github.com/hgnhat1511/LAB_OOSD/tree/main/IMAGES](https://github.com/hgnhat1511/LAB_OOSD/tree/main/IMAGES)
-- **Quyền truy cập:** **PUBLIC (Công khai)** – Luôn duy trì ở chế độ công khai để giảng viên truy cập kiểm tra và đối chiếu các hình vẽ.
+- **Thư mục IMAGES lưu trữ file nguồn Draw.io:** [https://github.com/hgnhat1511/LAB_OOSD/tree/main/IMAGES](https://github.com/hgnhat1511/LAB_OOSD/tree/main/IMAGES)
+- **Quyền truy cập:** **PUBLIC (Công khai 100%)** – Luôn duy trì ở chế độ công khai để giảng viên truy cập kiểm tra và đối chiếu các hình vẽ.
+- **Công cụ thực hiện:** Draw.io (`.drawio`, `.drawio.svg`), PlantUML (`.puml`).
 
 ---
 
@@ -30,26 +31,22 @@
 
 ---
 
-### 📂 DANH MỤC TỔNG HỢP CÁC BÀI LAB
+### 📂 DANH MỤC CÁC BÀI LAB & FILE DRAW.IO TƯƠNG ỨNG
 
-| STT | Bài LAB | Tên đề tài / Nội dung trọng tâm | Công cụ thiết kế & Công nghệ | Thư mục mã nguồn | Thư mục hình vẽ |
-| :---: | :--- | :--- | :--- | :--- | :--- |
-| 1 | **LAB 0** | Cài đặt & kiểm tra môi trường phát triển | JDK 21, Maven 3.9, Git, Docker, PlantUML | [`LAB0/`](./LAB0/) | [`IMAGES/LAB0/`](./IMAGES/LAB0/) |
-| 2 | **LAB 1** | Phân tích yêu cầu & Mô hình hóa ban đầu (Thư viện online & Cửa hàng NGK) | Use Case Model, Analysis Class, Sequence | [`LAB1/`](./LAB1/) | [`IMAGES/LAB1/`](./IMAGES/LAB1/) |
-| 3 | **LAB 2** | Hệ thống Quản lý Thư viện | C# WinForms, SQL Server, ERD, Sequence | [`LAB2/`](./LAB2/) | [`IMAGES/LAB2/`](./IMAGES/LAB2/) |
-| 4 | **LAB 3** | Hệ thống Quản lý Khách sạn | Kiến trúc 3 tầng (UI - Services - Data), SQL Server | [`LAB3/`](./LAB3/) | [`IMAGES/LAB3/`](./IMAGES/LAB3/) |
-| 5 | **LAB 4** | Phân tích và Thiết kế hệ thống e-Shopping | 15 Use Cases, Checkout, Activity, Sequence, ERD 3NF | [`LAB4/`](./LAB4/) | [`IMAGES/LAB4/`](./IMAGES/LAB4/) |
-| 6 | **LAB 5** | Phân tích & Thiết kế HT Quản lý Công ty Du lịch (Văn Hóa Việt TP.HCM) | PlantUML, 6 Sequence Diagrams, ERD, WinForms | [`LAB5/`](./LAB5/) | [`IMAGES/LAB5/`](./IMAGES/LAB5/) |
-| 7 | **LAB 6** | Quản lý Hồ sơ Bệnh án của Bệnh nhân | Draw.io (SVG/XML), ERD 13 bảng, WinForms | [`LAB6/`](./LAB6/) | [`IMAGES/LAB6/`](./IMAGES/LAB6/) |
-| 8 | **LAB 7** | Quản lý Nhân sự – Công ty sơn Đông Á | 4 Giai đoạn, PlantUML (.puml), State Machine | [`LAB7/`](./LAB7/) | [`IMAGES/LAB7/`](./IMAGES/LAB7/) |
-| 9 | **LAB 8** | Quản lý Cửa hàng Nước Giải Khát | StarUML, 4 Giai đoạn PT-TK, ERD, WinForms | [`LAB8/`](./LAB8/) | [`IMAGES/LAB8/`](./IMAGES/LAB8/) |
+| STT | Bài LAB | Tên đề tài / Nội dung trọng tâm | File Draw.io / Mô hình nguồn | Thư mục mã nguồn |
+| :---: | :--- | :--- | :--- | :--- |
+| 1 | **LAB 0** | Cài đặt & kiểm tra môi trường phát triển | 10 ảnh minh chứng cấu hình hệ thống | [`LAB0/`](./LAB0/) |
+| 2 | **LAB 1** | Phân tích yêu cầu & Mô hình hóa ban đầu | [`LAB1_Bai1_UseCase_Model.drawio`](./IMAGES/LAB1/LAB1_Bai1_UseCase_Model.drawio)<br>[`LAB1_Bai2_UseCase_TongQuat.drawio`](./IMAGES/LAB1/LAB1_Bai2_UseCase_TongQuat.drawio)<br>[`LAB1_Bai2_Class_Diagram.drawio`](./IMAGES/LAB1/LAB1_Bai2_Class_Diagram.drawio)<br>[`LAB1_Bai2_Activity_Diagram.drawio`](./IMAGES/LAB1/LAB1_Bai2_Activity_Diagram.drawio)<br>[`LAB1_Bai2_Sequence_Diagram.drawio`](./IMAGES/LAB1/LAB1_Bai2_Sequence_Diagram.drawio) | [`LAB1/`](./LAB1/) |
+| 3 | **LAB 2** | Hệ thống Quản lý Thư viện | [`LAB2_UseCase_TongQuat.drawio`](./IMAGES/LAB2/LAB2_UseCase_TongQuat.drawio)<br>[`LAB2_Class_Diagram.drawio`](./IMAGES/LAB2/LAB2_Class_Diagram.drawio)<br>[`LAB2_ERD_QuanLyThuVien.drawio`](./IMAGES/LAB2/LAB2_ERD_QuanLyThuVien.drawio)<br>[`LAB2_Activity_MuonTraSach.drawio`](./IMAGES/LAB2/LAB2_Activity_MuonTraSach.drawio)<br>[`LAB2_Sequence_LapPhieuMuon.drawio`](./IMAGES/LAB2/LAB2_Sequence_LapPhieuMuon.drawio) | [`LAB2/`](./LAB2/) |
+| 4 | **LAB 3** | Hệ thống Quản lý Khách sạn | [`LAB3_UseCase_QuanLyKhachSan.drawio`](./IMAGES/LAB3/LAB3_UseCase_QuanLyKhachSan.drawio)<br>[`LAB3_ERD_QuanLyKhachSan.drawio`](./IMAGES/LAB3/LAB3_ERD_QuanLyKhachSan.drawio) | [`LAB3/`](./LAB3/) |
+| 5 | **LAB 4** | Phân tích và Thiết kế hệ thống e-Shopping | [`LAB4_UseCase_TongQuat.drawio`](./IMAGES/LAB4/LAB4_UseCase_TongQuat.drawio)<br>[`LAB4_Activity_Checkout.drawio`](./IMAGES/LAB4/LAB4_Activity_Checkout.drawio)<br>[`LAB4_Analysis_Class_Diagram.drawio`](./IMAGES/LAB4/LAB4_Analysis_Class_Diagram.drawio)<br>[`LAB4_DangKy_DangNhap.drawio`](./IMAGES/LAB4/LAB4_DangKy_DangNhap.drawio) | [`LAB4/`](./LAB4/) |
+| 6 | **LAB 5** | Phân tích & Thiết kế HT Quản lý Công ty Du lịch | [`LAB5_UseCase_QuanLyDuLich.drawio`](./IMAGES/LAB5/LAB5_UseCase_QuanLyDuLich.drawio)<br>[`LAB5_Activity_DangKyTour.drawio`](./IMAGES/LAB5/LAB5_Activity_DangKyTour.drawio) | [`LAB5/`](./LAB5/) |
+| 7 | **LAB 6** | Quản lý Hồ sơ Bệnh án của Bệnh nhân | [`LAB6_Activity_Diagram.drawio`](./IMAGES/LAB6/LAB6_Activity_Diagram.drawio)<br>[`LAB6_Class_Diagram.drawio`](./IMAGES/LAB6/LAB6_Class_Diagram.drawio)<br>[`LAB6_ERD_Diagram.drawio`](./IMAGES/LAB6/LAB6_ERD_Diagram.drawio)<br>[`LAB6_UseCase_Diagram.drawio`](./IMAGES/LAB6/LAB6_UseCase_Diagram.drawio)<br>[`LAB6_PhanRa_ChucNang.drawio`](./IMAGES/LAB6/LAB6_PhanRa_ChucNang.drawio)<br>[`LAB6_Sequence_Diagram.drawio`](./IMAGES/LAB6/LAB6_Sequence_Diagram.drawio) | [`LAB6/`](./LAB6/) |
+| 8 | **LAB 7** | Quản lý Nhân sự – Công ty sơn Đông Á | [`LAB7_UseCase_QuanLyNhanSu.drawio`](./IMAGES/LAB7/LAB7_UseCase_QuanLyNhanSu.drawio)<br>[`LAB7_State_NhanVien.drawio`](./IMAGES/LAB7/LAB7_State_NhanVien.drawio)<br>PlantUML Scripts (`.puml`) | [`LAB7/`](./LAB7/) |
+| 9 | **LAB 8** | Quản lý Cửa hàng Nước Giải Khát | [`LAB8_Hinh2_1_UseCase_TongQuat.drawio`](./IMAGES/LAB8/LAB8_Hinh2_1_UseCase_TongQuat.drawio)<br>[`LAB8_Hinh2_6_State_HoaDon.drawio`](./IMAGES/LAB8/LAB8_Hinh2_6_State_HoaDon.drawio)<br>[`LAB8_Hinh3_3_ERD.drawio`](./IMAGES/LAB8/LAB8_Hinh3_3_ERD.drawio) | [`LAB8/`](./LAB8/) |
 
 ---
 
-### 🎨 QUY ĐỊNH VỀ HÌNH VẼ PHÂN TÍCH VÀ THIẾT KẾ TRÊN GITHUB
-Toàn bộ sơ đồ, hình vẽ trong phần phân tích và thiết kế hệ thống được lưu trữ trong thư mục [`IMAGES/`](./IMAGES/):
-- Giữ nguyên định dạng gốc và vector có chứa siêu dữ liệu mô hình chuyên dụng:
-  + **Draw.io:** Các file `.drawio.svg` chứa mã nguồn XML mô hình hóa đầy đủ (có thể mở chỉnh sửa trực tiếp trên diagrams.net).
-  + **PlantUML:** Các file mã nguồn `.puml` và sơ đồ kết xuất.
-  + **StarUML / Visio:** Các sơ đồ phân rã chi tiết, biểu đồ trạng thái, biểu đồ hoạt động và biểu đồ tuần tự.
-- Giảng viên có thể truy cập trực tiếp thư mục [`IMAGES/`](./IMAGES/) trên GitHub để kiểm tra đối chiếu tính xác thực của từng bài thực hành.
+### 🎨 CÁCH MỞ VÀ KIỂM TRA FILE DRAW.IO
+1. Truy cập trực tiếp: [https://app.diagrams.net/](https://app.diagrams.net/)
+2. Chọn **Open Existing Diagram** -> Mở bất kỳ file `.drawio` nào từ máy hoặc kéo thả trực tiếp vào trình duyệt để kiểm tra cấu trúc mô hình.

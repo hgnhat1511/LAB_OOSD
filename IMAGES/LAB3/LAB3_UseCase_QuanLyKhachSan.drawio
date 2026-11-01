@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" modified="2026-11-01T20:00:00.000Z" agent="Antigravity" version="24.0.0" type="device">
+  <diagram id="e162315f65e84f30" name="LAB3_UseCase_QuanLyKhachSan">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="HỆ THỐNG QUẢN LÝ KHÁCH SẠN" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8f9fa;fontColor=#212529;strokeColor=#495057;fontFamily=Times New Roman;fontSize=14;fontStyle=1;startSize=28;" vertex="1" parent="1"><mxGeometry x="220" y="40" width="680" height="560" as="geometry" /></mxCell>
+        <mxCell id="3" value="Nhân viên
+Lễ tân" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="200" width="40" height="80" as="geometry" /></mxCell>
+        <mxCell id="4" value="Quản lý
+khách sạn" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="960" y="200" width="40" height="80" as="geometry" /></mxCell>
+        <mxCell id="5" value="Khách thuê" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Times New Roman;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="60" y="420" width="40" height="80" as="geometry" /></mxCell>
+        <mxCell id="6" value="Đăng nhập hệ thống" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="270" y="70" width="160" height="60" as="geometry" /></mxCell>
+        <mxCell id="7" value="Quản lý danh mục Phòng" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="270" y="150" width="160" height="60" as="geometry" /></mxCell>
+        <mxCell id="8" value="Quản lý Tiện nghi phòng" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="270" y="230" width="160" height="60" as="geometry" /></mxCell>
+        <mxCell id="9" value="Đặt phòng &amp; Nhận phòng" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="270" y="310" width="160" height="60" as="geometry" /></mxCell>
+        <mxCell id="10" value="Gọi dịch vụ gia tăng" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="270" y="390" width="160" height="60" as="geometry" /></mxCell>
+        <mxCell id="11" value="Trả phòng &amp; Lập hóa đơn" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="270" y="470" width="160" height="60" as="geometry" /></mxCell>
+        <mxCell id="12" value="Quản lý Bảng giá &amp; Loại phòng" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="650" y="150" width="160" height="60" as="geometry" /></mxCell>
+        <mxCell id="13" value="Thống kê doanh thu &amp; Tần suất" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="650" y="270" width="160" height="60" as="geometry" /></mxCell>
+        <mxCell id="14" value="Quản lý tài khoản nhân viên" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Times New Roman;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="650" y="390" width="160" height="60" as="geometry" /></mxCell>
+        <mxCell id="15" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="3" target="6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="16" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="3" target="7"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="17" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="3" target="8"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="18" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="3" target="9"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="19" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="3" target="10"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="20" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="3" target="11"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="21" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="5" target="9"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="22" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="5" target="10"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="23" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="4" target="6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="24" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="4" target="12"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="25" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="4" target="13"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="26" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#495057;fontFamily=Times New Roman;fontSize=11;" edge="1" parent="1" source="4" target="14"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
