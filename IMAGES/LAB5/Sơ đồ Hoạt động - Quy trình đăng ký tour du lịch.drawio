@@ -1,0 +1,454 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Trang-1" id="kvvee6L4XcCDeBI1hsf8">
+    <mxGraphModel dx="1030" dy="567" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;@startuml\nskinparam monochrome true\nskinparam shadowing false\n\nstart\n:Khách hàng truy cập website;\n:Xem danh sách tour du lịch;\n:Chọn tour muốn tham gia;\nif (Hình thức đăng ký?) then (Theo đoàn &gt; 12 người)\n  :Nhập thông tin đoàn;\n  :Cung cấp người đại diện,\\nđịa chỉ, số điện thoại;\n  :Nhập số lượng thành viên;\n  :Chọn ngày khởi hành;\n  :Chọn địa điểm đón;\n  if (Mua bảo hiểm?) then (Có)\n    :Cung cấp danh sách thành viên\\nvà thông tin bảo hiểm;\n  else (Không)\n  endif\n  :Lập phiếu đăng ký tour đoàn;\n  :Thanh toán tiền đặt cọc;\n  if (Thanh toán đặt cọc thành công?) then (Có)\n    :Xác nhận đăng ký tour đoàn;\n  else (Không)\n    :Thông báo thanh toán thất bại;\n    stop\n  endif\nelse (Tour ghép &lt; 12 người)\n  :Chọn chuyến đi có lịch khởi hành;\n  :Nhập thông tin khách hàng;\n  :Đăng ký số lượng vé;\n  :Lập phiếu đăng ký chuyến đi;\n  :Thanh toán tiền vé;\n  if (Thanh toán thành công?) then (Có)\n    :Xác nhận đăng ký chuyến đi;\n  else (Không)\n    :Thông báo thanh toán thất bại;\n    stop\n  endif\nendif\n:Thông báo kết quả đăng ký;\nstop\n@enduml&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="ZECeDipi7ugjZtk7lVeu-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="start_0" plantUmlBaseStyle="ellipse;fillColor=#222222;strokeColor=#222222;shadow=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-2">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="ellipse;fillColor=#222222;strokeColor=#222222;shadow=0;" vertex="1">
+            <mxGeometry height="20" width="20" x="439.5" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Khách hàng truy cập website" plantUmlId="action_1" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Khách hàng truy cập website" id="ZECeDipi7ugjZtk7lVeu-3">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="188" x="355.5" y="70" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_2" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-4">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-2" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-3">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="449.5" y="50" as="sourcePoint" />
+              <mxPoint x="449.5" y="70" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Xem danh sách tour du lịch" plantUmlId="action_3" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Xem danh sách tour du lịch" id="ZECeDipi7ugjZtk7lVeu-5">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="183" x="358" y="124" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_4" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-6">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-3" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-5">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="449.5" y="104" as="sourcePoint" />
+              <mxPoint x="449.5" y="124" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Chọn tour muốn tham gia" plantUmlId="action_5" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Chọn tour muốn tham gia" id="ZECeDipi7ugjZtk7lVeu-7">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="170" x="364.5" y="178" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_6" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-8">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-5" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-7">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="449.5" y="158" as="sourcePoint" />
+              <mxPoint x="449.5" y="178" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Hình thức đăng ký?" plantUmlId="diamond_8" plantUmlBaseStyle="shape=hexagon;perimeter=hexagonPerimeter2;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontSize=11;shadow=0;" plantUmlBaseValue="Hình thức đăng ký?" id="ZECeDipi7ugjZtk7lVeu-9">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="shape=hexagon;perimeter=hexagonPerimeter2;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontSize=11;shadow=0;" vertex="1">
+            <mxGeometry height="24" width="129" x="385" y="232" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_9" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-10">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-7" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-9">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="449.5" y="212" as="sourcePoint" />
+              <mxPoint x="449.5" y="232" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Theo đoàn &gt; 12 người" plantUmlId="e_10" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=left;align=right;exitX=0;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Theo đoàn &gt; 12 người" id="ZECeDipi7ugjZtk7lVeu-11">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-9" style="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=left;align=right;exitX=0;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-12">
+            <mxGeometry relative="1" x="-1" as="geometry">
+              <Array as="points">
+                <mxPoint x="228.5" y="244" />
+              </Array>
+              <mxPoint x="385" y="244" as="sourcePoint" />
+              <mxPoint x="228.5" y="266" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Nhập thông tin đoàn" plantUmlId="action_12" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Nhập thông tin đoàn" id="ZECeDipi7ugjZtk7lVeu-12">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="139" x="159" y="266" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Cung cấp người đại diện,&#xa;địa chỉ, số điện thoại" plantUmlId="action_13" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Cung cấp người đại diện,&#xa;địa chỉ, số điện thoại" id="ZECeDipi7ugjZtk7lVeu-13">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="48" width="164" x="146.5" y="320" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_14" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-14">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-12" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-13">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="228.5" y="300" as="sourcePoint" />
+              <mxPoint x="228.5" y="320" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Nhập số lượng thành viên" plantUmlId="action_15" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Nhập số lượng thành viên" id="ZECeDipi7ugjZtk7lVeu-15">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="168" x="144.5" y="388" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_16" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-16">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-13" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-15">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="228.5" y="368" as="sourcePoint" />
+              <mxPoint x="228.5" y="388" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Chọn ngày khởi hành" plantUmlId="action_17" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Chọn ngày khởi hành" id="ZECeDipi7ugjZtk7lVeu-17">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="143" x="157" y="442" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_18" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-18">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-15" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-17">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="228.5" y="422" as="sourcePoint" />
+              <mxPoint x="228.5" y="442" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Chọn địa điểm đón" plantUmlId="action_19" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Chọn địa điểm đón" id="ZECeDipi7ugjZtk7lVeu-19">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="131" x="163" y="496" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_20" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-20">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-17" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-19">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="228.5" y="476" as="sourcePoint" />
+              <mxPoint x="228.5" y="496" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Mua bảo hiểm?" plantUmlId="diamond_22" plantUmlBaseStyle="shape=hexagon;perimeter=hexagonPerimeter2;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontSize=11;shadow=0;" plantUmlBaseValue="Mua bảo hiểm?" id="ZECeDipi7ugjZtk7lVeu-21">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="shape=hexagon;perimeter=hexagonPerimeter2;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontSize=11;shadow=0;" vertex="1">
+            <mxGeometry height="24" width="104" x="176.5" y="550" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_23" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-22">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-19" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-21">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="228.5" y="530" as="sourcePoint" />
+              <mxPoint x="228.5" y="550" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Có" plantUmlId="e_24" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;labelPosition=right;align=left;verticalAlign=top;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Có" id="ZECeDipi7ugjZtk7lVeu-23">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-21" style="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;labelPosition=right;align=left;verticalAlign=top;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-24">
+            <mxGeometry relative="1" x="-1" as="geometry">
+              <mxPoint x="228.5" y="574" as="sourcePoint" />
+              <mxPoint x="228.5" y="598" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Cung cấp danh sách thành viên&#xa;và thông tin bảo hiểm" plantUmlId="action_25" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Cung cấp danh sách thành viên&#xa;và thông tin bảo hiểm" id="ZECeDipi7ugjZtk7lVeu-24">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="48" width="203" x="127" y="598" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Không" plantUmlId="e_26" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=right;align=left;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Không" id="ZECeDipi7ugjZtk7lVeu-25">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-21" style="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=right;align=left;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-26">
+            <mxGeometry relative="1" x="-1" as="geometry">
+              <Array as="points">
+                <mxPoint x="340.5" y="562" />
+                <mxPoint x="340.5" y="678" />
+              </Array>
+              <mxPoint x="280.5" y="562" as="sourcePoint" />
+              <mxPoint x="240.5" y="678" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="merge_27" plantUmlBaseStyle="rhombus;fillColor=#F1F1F1;strokeColor=#181818;shadow=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-26">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rhombus;fillColor=#F1F1F1;strokeColor=#181818;shadow=0;" vertex="1">
+            <mxGeometry height="24" width="24" x="216.5" y="666" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_28" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-27">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-24" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-26">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="228.5" y="646" as="sourcePoint" />
+              <mxPoint x="228.5" y="666" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Lập phiếu đăng ký tour đoàn" plantUmlId="action_31" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Lập phiếu đăng ký tour đoàn" id="ZECeDipi7ugjZtk7lVeu-28">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="187" x="135" y="710" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_32" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-29">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-26" style="endArrow=classic;endSize=8;strokeColor=#181818;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-28">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="228.5" y="690" as="sourcePoint" />
+              <mxPoint x="228.5" y="710" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Thanh toán tiền đặt cọc" plantUmlId="action_33" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Thanh toán tiền đặt cọc" id="ZECeDipi7ugjZtk7lVeu-30">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="157" x="150" y="764" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_34" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-31">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-28" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-30">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="228.5" y="744" as="sourcePoint" />
+              <mxPoint x="228.5" y="764" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Thanh toán đặt cọc thành công?" plantUmlId="diamond_36" plantUmlBaseStyle="shape=hexagon;perimeter=hexagonPerimeter2;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontSize=11;shadow=0;" plantUmlBaseValue="Thanh toán đặt cọc thành công?" id="ZECeDipi7ugjZtk7lVeu-32">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="shape=hexagon;perimeter=hexagonPerimeter2;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontSize=11;shadow=0;" vertex="1">
+            <mxGeometry height="24" width="194" x="131.5" y="818" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_37" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-33">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-30" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-32">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="228.5" y="798" as="sourcePoint" />
+              <mxPoint x="228.5" y="818" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Có" plantUmlId="e_38" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=left;align=right;exitX=0;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Có" id="ZECeDipi7ugjZtk7lVeu-34">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-32" style="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=left;align=right;exitX=0;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-35">
+            <mxGeometry relative="1" x="-1" as="geometry">
+              <Array as="points">
+                <mxPoint x="121.5" y="830" />
+              </Array>
+              <mxPoint x="131.5" y="830" as="sourcePoint" />
+              <mxPoint x="121.5" y="852" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Xác nhận đăng ký tour đoàn" plantUmlId="action_40" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Xác nhận đăng ký tour đoàn" id="ZECeDipi7ugjZtk7lVeu-35">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="183" x="30" y="852" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Không" plantUmlId="e_41" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=right;align=left;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Không" id="ZECeDipi7ugjZtk7lVeu-36">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-32" style="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=right;align=left;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-37">
+            <mxGeometry relative="1" x="-1" as="geometry">
+              <Array as="points">
+                <mxPoint x="335.5" y="830" />
+              </Array>
+              <mxPoint x="325.5" y="830" as="sourcePoint" />
+              <mxPoint x="335.5" y="852" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Thông báo thanh toán thất bại" plantUmlId="action_43" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Thông báo thanh toán thất bại" id="ZECeDipi7ugjZtk7lVeu-37">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="198" x="236.5" y="852" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="stop_44" plantUmlBaseStyle="ellipse;shape=endState;fillColor=#222222;strokeColor=#222222;shadow=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-38">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="ellipse;shape=endState;fillColor=#222222;strokeColor=#222222;shadow=0;" vertex="1">
+            <mxGeometry height="22" width="22" x="324.5" y="906" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_45" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-39">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-37" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-38">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="335.5" y="886" as="sourcePoint" />
+              <mxPoint x="335.5" y="906" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Tour ghép &lt; 12 người" plantUmlId="e_46" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=right;align=left;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Tour ghép &lt; 12 người" id="ZECeDipi7ugjZtk7lVeu-40">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-9" style="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=right;align=left;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-41">
+            <mxGeometry relative="1" x="-1" as="geometry">
+              <Array as="points">
+                <mxPoint x="670.5" y="244" />
+              </Array>
+              <mxPoint x="514" y="244" as="sourcePoint" />
+              <mxPoint x="670.5" y="266" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Chọn chuyến đi có lịch khởi hành" plantUmlId="action_48" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Chọn chuyến đi có lịch khởi hành" id="ZECeDipi7ugjZtk7lVeu-41">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="215" x="563" y="266" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Nhập thông tin khách hàng" plantUmlId="action_49" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Nhập thông tin khách hàng" id="ZECeDipi7ugjZtk7lVeu-42">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="179" x="581" y="320" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_50" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-43">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-41" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-42">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="670.5" y="300" as="sourcePoint" />
+              <mxPoint x="670.5" y="320" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Đăng ký số lượng vé" plantUmlId="action_51" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Đăng ký số lượng vé" id="ZECeDipi7ugjZtk7lVeu-44">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="135" x="603" y="374" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_52" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-45">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-42" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-44">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="670.5" y="354" as="sourcePoint" />
+              <mxPoint x="670.5" y="374" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Lập phiếu đăng ký chuyến đi" plantUmlId="action_53" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Lập phiếu đăng ký chuyến đi" id="ZECeDipi7ugjZtk7lVeu-46">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="186" x="577.5" y="428" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_54" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-47">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-44" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-46">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="670.5" y="408" as="sourcePoint" />
+              <mxPoint x="670.5" y="428" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Thanh toán tiền vé" plantUmlId="action_55" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Thanh toán tiền vé" id="ZECeDipi7ugjZtk7lVeu-48">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="129" x="606" y="482" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_56" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-49">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-46" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-48">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="670.5" y="462" as="sourcePoint" />
+              <mxPoint x="670.5" y="482" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Thanh toán thành công?" plantUmlId="diamond_58" plantUmlBaseStyle="shape=hexagon;perimeter=hexagonPerimeter2;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontSize=11;shadow=0;" plantUmlBaseValue="Thanh toán thành công?" id="ZECeDipi7ugjZtk7lVeu-50">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="shape=hexagon;perimeter=hexagonPerimeter2;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontSize=11;shadow=0;" vertex="1">
+            <mxGeometry height="24" width="153" x="594" y="536" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_59" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-51">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-48" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-50">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="670.5" y="516" as="sourcePoint" />
+              <mxPoint x="670.5" y="536" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Có" plantUmlId="e_60" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=left;align=right;exitX=0;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Có" id="ZECeDipi7ugjZtk7lVeu-52">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-50" style="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=left;align=right;exitX=0;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-53">
+            <mxGeometry relative="1" x="-1" as="geometry">
+              <Array as="points">
+                <mxPoint x="565.5" y="548" />
+              </Array>
+              <mxPoint x="594" y="548" as="sourcePoint" />
+              <mxPoint x="565.5" y="570" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Xác nhận đăng ký chuyến đi" plantUmlId="action_62" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Xác nhận đăng ký chuyến đi" id="ZECeDipi7ugjZtk7lVeu-53">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="183" x="474" y="570" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Không" plantUmlId="e_63" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=right;align=left;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="Không" id="ZECeDipi7ugjZtk7lVeu-54">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-50" style="endArrow=classic;endSize=8;strokeColor=#181818;fontSize=11;verticalAlign=bottom;labelPosition=right;align=left;exitX=1;exitY=0.5;exitDx=0;exitDy=0;curved=0;rounded=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-55">
+            <mxGeometry relative="1" x="-1" as="geometry">
+              <Array as="points">
+                <mxPoint x="775.5" y="548" />
+              </Array>
+              <mxPoint x="747" y="548" as="sourcePoint" />
+              <mxPoint x="775.5" y="570" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Thông báo thanh toán thất bại" plantUmlId="action_65" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Thông báo thanh toán thất bại" id="ZECeDipi7ugjZtk7lVeu-55">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="198" x="676.5" y="570" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="stop_66" plantUmlBaseStyle="ellipse;shape=endState;fillColor=#222222;strokeColor=#222222;shadow=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-56">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="ellipse;shape=endState;fillColor=#222222;strokeColor=#222222;shadow=0;" vertex="1">
+            <mxGeometry height="22" width="22" x="764.5" y="624" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_67" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-57">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-55" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-56">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="775.5" y="604" as="sourcePoint" />
+              <mxPoint x="775.5" y="624" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="merge_68" plantUmlBaseStyle="rhombus;fillColor=#F1F1F1;strokeColor=#181818;shadow=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-58">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rhombus;fillColor=#F1F1F1;strokeColor=#181818;shadow=0;" vertex="1">
+            <mxGeometry height="24" width="24" x="437.5" y="934" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_69" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-59">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-35" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-58">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="121.5" y="946" />
+              </Array>
+              <mxPoint x="121.5" y="886" as="sourcePoint" />
+              <mxPoint x="437.5" y="946" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_71" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-60">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-53" style="endArrow=classic;endSize=8;strokeColor=#181818;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-58">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="565.5" y="946" />
+              </Array>
+              <mxPoint x="565.5" y="604" as="sourcePoint" />
+              <mxPoint x="461.5" y="946" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Thông báo kết quả đăng ký" plantUmlId="action_73" plantUmlBaseStyle="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" plantUmlBaseValue="Thông báo kết quả đăng ký" id="ZECeDipi7ugjZtk7lVeu-61">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="rounded=1;absoluteArcSize=1;arcSize=25;fillColor=#F1F1F1;strokeColor=#181818;strokeWidth=0.5;whiteSpace=wrap;fontSize=12;align=left;spacingLeft=8;shadow=0;" vertex="1">
+            <mxGeometry height="34" width="180" x="359.5" y="978" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_74" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-62">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-58" style="endArrow=classic;endSize=8;strokeColor=#181818;exitX=0.5;exitY=1;exitDx=0;exitDy=0;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-61">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="449.5" y="958" as="sourcePoint" />
+              <mxPoint x="449.5" y="978" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="stop_75" plantUmlBaseStyle="ellipse;shape=endState;fillColor=#222222;strokeColor=#222222;shadow=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-63">
+          <mxCell parent="ZECeDipi7ugjZtk7lVeu-1" style="ellipse;shape=endState;fillColor=#222222;strokeColor=#222222;shadow=0;" vertex="1">
+            <mxGeometry height="22" width="22" x="438.5" y="1032" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="e_76" plantUmlBaseStyle="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="ZECeDipi7ugjZtk7lVeu-64">
+          <mxCell edge="1" parent="ZECeDipi7ugjZtk7lVeu-1" source="ZECeDipi7ugjZtk7lVeu-61" style="endArrow=classic;endSize=8;strokeColor=#181818;curved=0;rounded=0;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="ZECeDipi7ugjZtk7lVeu-63">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="449.5" y="1012" as="sourcePoint" />
+              <mxPoint x="449.5" y="1032" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
